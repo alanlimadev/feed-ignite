@@ -1,13 +1,14 @@
 import { ThumbsUp, Trash } from 'lucide-react';
 import styles from './comment.module.css';
+import { Avatar } from './avatar';
 
 export function Comment() {
   return (
     <div className={styles.comment}>
-      <img src="https://github.com/alanlimadev.png" alt="" />
+      <Avatar src="https://github.com/alanlimadev.png" alt="" />
 
       <div className={styles.commentBox}>
-        <div className={styles.commentContent}>
+        <div hasBorder={false} className={styles.commentContent}>
           <header>
             <div className={styles.authorAndTime}>
               <strong>Alan Lima</strong>
