@@ -2,7 +2,7 @@ import { ThumbsUp, Trash } from 'lucide-react';
 import styles from './comment.module.css';
 import { Avatar } from './avatar';
 
-export function Comment() {
+export function Comment({ content }) {
   return (
     <div className={styles.comment}>
       <Avatar src="https://github.com/alanlimadev.png" alt="" />
@@ -23,7 +23,7 @@ export function Comment() {
               <Trash size={20} />
             </button>
           </header>
-          <p>Muito bom Devon, parabéns!! 👏👏</p>
+          <p>{content}</p>
         </div>
         <footer>
           <button>
