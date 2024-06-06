@@ -2,7 +2,11 @@ import { ThumbsUp, Trash } from 'lucide-react';
 import styles from './comment.module.css';
 import { Avatar } from './avatar';
 
-export function Comment({ content }) {
+export function Comment({ content, onDeleteComment }) {
+  function handleDeleteComment() {
+    onDeleteComment(content);
+  }
+
   return (
     <div className={styles.comment}>
       <Avatar src="https://github.com/alanlimadev.png" alt="" />
@@ -19,7 +23,7 @@ export function Comment({ content }) {
                 Cerca de 1h atrás
               </time>
             </div>
-            <button title="Deletar comentário">
+            <button onClick={handleDeleteComment} title="Deletar comentário">
               <Trash size={20} />
             </button>
           </header>
